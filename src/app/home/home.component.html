@@ -1,0 +1,13 @@
+<div class="container" class= "background">
+
+    <mat-tab-group mat-align-tabs="center"  >
+        <mat-tab *ngFor="let genre of genres"[label]="genre.genre" color="primary">
+            <ng-template mat-tab-label >
+                <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+                <span style="color: rgb(207, 207, 183);"class="random">{{genre.genre}}</span>
+              </ng-template>
+            <app-genremovies [GenreName]=genre.genre [GenreImageUrl]=genre.url></app-genremovies></mat-tab>
+           
+      </mat-tab-group>
+
+</div>
