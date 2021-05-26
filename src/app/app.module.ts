@@ -8,10 +8,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { MovieinfoComponent } from './movieinfo/movieinfo.component';
+import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import { GenremoviesComponent } from './genremovies/genremovies.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     MatTabsModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule
     
   ],
   providers: [],

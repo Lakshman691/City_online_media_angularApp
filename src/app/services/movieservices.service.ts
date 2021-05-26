@@ -21,7 +21,19 @@ export class MovieservicesService {
     return this.http.get<genreType[]>(this.baseUrl + 'genres',httpOptions )
   
   }
-  public getGenerMovies(genre:string):Observable<movie[]>{
-    return of();
+  public getGenerMovies(genreName:string):Observable<movie[]>{
+    return this.http.get<movie[]>(this.baseUrl+genreName,httpOptions);
+  }
+  public getMovieInfo(id):Observable<movie>{
+    return this.http.get<movie>(this.baseUrl+'movieinfo/'+id,httpOptions)
+  }
+  changeGenre(ugenre,uid):Observable<any>{
+    let GenreJosn ={
+      id:uid,
+      genre: ugenre
+    }
+    // const dat =JSON.stringify(GenreJosn);
+    // console.log(dat)
+    return this.http.post<any>(this.baseUrl + 'updateGenre', GenreJosn,);
   }
 }

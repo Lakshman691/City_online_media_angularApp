@@ -6,9 +6,23 @@
   >
   <div class="mcontent row container justify-content-between col-12">
     
-    <mat-card  *ngFor="let number of [0,1,2,3,4,5,6,7,8]" (click)="movieInfo()" class="m-1 col-2">
+    <div class="card bg-dark p-0 text-white col-2 m-2 " (click)="movieInfo(movie)" *ngFor="let movie of movies" style="height: 250px;">
+      <img class="card-img" [src]="movie.url " alt="Card image">
+      <div class="card-img-overlay " >
+        <h1 class=" font-weight-bold justify-content-center grad-text"  >{{movie.TITLE}} <br> Rating: {{movie.RATING}}</h1>
+        <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Last updated 3 mins ago</p> -->
+      </div>
+    </div>
+    <!-- <mat-card  *ngFor="let movie of movies" (click)="movieInfo()" class="m-1 col-2 background" style="height: 100px; height: 200px;">
         <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      </mat-card>
+         <img
+    class="" style="overflow:hidden;opacity: 0.7;"
+    [src]="movie.url"
+    mat-card-image
+    alt="movie poster"
+  > -->
+    <!-- </mat-card>  -->
 
 
   </div>
