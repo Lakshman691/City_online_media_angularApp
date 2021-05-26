@@ -28,7 +28,7 @@ this.router.params.subscribe(params=>{
         this.genres=data;
         this.genre=data[0].genre;
         console.log(this.genres[0])
-        //this.route.navigate(['/genre']);
+        //this.route.navigate(['/'+this.genre.navi]);
       });
     }
   
